@@ -3,10 +3,10 @@
 </div>
 
 # 📗 Table of Contents
-- [Key features](#key-futures)
-- [Future Features](#future-features)
-- [Stacks](#tools--stacks)
-- [Support](#⭐️-show-your-support)
+- [Key features](#key-futures-)
+- [Future Features](#future-features-)
+- [Stacks](#tools--stacks-)
+- [Support](#⭐️-show-your-support-)
 
 # F2F APP
 f2f is an app where users can talk with each other, post content, and gain access by completing authorization.
