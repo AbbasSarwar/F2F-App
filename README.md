@@ -12,19 +12,25 @@
 f2f is an app where users can talk with each other, post content, and gain access by completing authorization.
 
 ## Tools & Stacks <a name="stacks"></a>
-**[CSS3 & HTML5]**
-**[React ]**
-**[TailwindCss ]**
+- **[CSS3 & HTML5]**
+- **[React ]**
+- **[TailwindCss ]**
+
+<p align="right">(<a href="#📗-table-of-contents">back to top</a>)</p>
 
 ## Key Futures <a name="key-features"></a>
 - Coming soon
 
+<p align="right">(<a href="#📗-table-of-contents">back to top</a>)</p>
+
 ## Future Features <a name="future-keys"></a>
-**[Authorization ]**
-**[Features Styling]**
-**[Chat section]**
-**[Timeline ]**
-**[All Times section]**
+- **[Authorization ]**
+- **[Features Styling]**
+- **[Chat section]**
+- **[Timeline ]**
+- **[All Times section]**
 
 # ⭐️ Show your support <a name="support"></a>
 - Your support is crucial to the success of this project!
+
+<p align="right">(<a href="#📗-table-of-contents">back to top</a>)</p>
