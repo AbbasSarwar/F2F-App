@@ -1,8 +1,13 @@
+import { Routes, Route } from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+
 const Auth = () => {
     return (
-        <section className="p-5 h-screen">
+        <section className="bg-slate-950 md:px-52 md:py-12 h-screen">
             <div className="authwrapper">
-                <h1 className="text-center">Authorization</h1>
+                <button>Login</button>
+                <button>Sign up</button>
             </div>
         </section>
     )
