@@ -1,4 +1,10 @@
 const Register = () => {
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const email = e.target[0].value
+    const password = e.target[1].value
+  }
+
     return (
       <section className="bg-slate-950 md:px-52 md:py-12 h-screen">
         <div className="authwrapper">
@@ -7,7 +13,7 @@ const Register = () => {
             <h1 className="text-gray-50 text-3xl">Sign up</h1>
           </div>
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-              <form className="space-y-6" action="#" method="POST">
+              <form className="space-y-6" action="#" method="POST" onSubmit={HandleSubmit}>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-50">Email address</label>
                   <div className="mt-2">
