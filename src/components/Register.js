@@ -1,8 +1,22 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 const Register = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
     const email = e.target[0].value
     const password = e.target[1].value
+    console.log(email);
+
+
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    console.log(user);
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
   }
 
     return (
