@@ -11,9 +11,9 @@ const Register = () => {
     const password = e.target[2].value;
     const file = e.target[4].value;
 
-    try{
+    try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
-    }catch(err){
+    } catch (err) {
       setErr(true);
     }
   }
@@ -27,7 +27,7 @@ const Register = () => {
           </div>
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <form className="space-y-6" action="#" method="POST" onSubmit={HandleSubmit}>
-            <div>
+              <div>
                 <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-50">User Name</label>
                 <div className="mt-2">
                   <input id="username" name="username" type="text" autoComplete="username" required className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
@@ -51,7 +51,7 @@ const Register = () => {
               </div>
 
               <div className="w-100">
-              <input type="file" id="upload" name="file" className="hidden" />
+                <input type="file" id="upload" name="file" className="hidden" />
                 <label htmlFor="upload" className="rounded-sm w-48 flex flex-row items-center gap-2 cursor">
                   <span className="text-5xl"><FcAddImage /></span>
                   <span className="text-lg text-gray-50">Profile picture</span>
