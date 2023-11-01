@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc } from "firebase/firestore";
 import { FcAddImage } from "react-icons/fc";
 import { auth, storage, db } from "../firebase";
 import { useState } from "react";
@@ -16,30 +16,30 @@ const Register = () => {
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
 
-const storageRef = ref(storage, username);
+      const storageRef = ref(storage, username);
 
-const uploadTask = uploadBytesResumable(storageRef, file);
-uploadTask.on(
-  (error) => {
-    setErr(true)
-  }, 
-  () => {
-    // Handle successful uploads on complete
-    getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-      await updateProfile(res.user, {
-        username,
-        photoURL: downloadURL
-      });
-      await setDoc(doc(db, "users", res.user.uid), {
-        uid: res.user.uid,
-        username,
-        email,
-        photoURL: downloadURL
-      
-      })
-    });
-  }
-);
+      const uploadTask = uploadBytesResumable(storageRef, file);
+      uploadTask.on(
+        (error) => {
+          setErr(true)
+        },
+        () => {
+          // Handle successful uploads on complete
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            await updateProfile(res.user, {
+              username,
+              photoURL: downloadURL
+            });
+            await setDoc(doc(db, "users", res.user.uid), {
+              uid: res.user.uid,
+              username,
+              email,
+              photoURL: downloadURL
+
+            })
+          });
+        }
+      );
     } catch (err) {
       setErr(true);
     }
